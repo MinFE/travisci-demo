@@ -17,3 +17,13 @@ before_script:
 script:
   - node .travis/run.js
   - node app.js
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: 7a81a0a63d30f90b7c26d415b257f1cd6b4d7b58
+  keep-history: true
+  on:
+    branch: master
+  email: chenxiaowue1994@outlook.com
+  name: travis build
